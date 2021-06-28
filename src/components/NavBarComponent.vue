@@ -49,7 +49,7 @@ export default {
   background-color: #B28DD6;
   display: flex;
   width: 100%;
-  height: 100px;
+  height: 80px;
 }
 
 

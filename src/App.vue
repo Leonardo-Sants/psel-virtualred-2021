@@ -2,16 +2,19 @@
   <div id="app">
     
     <NavBarComponent />
+    <SideBarComponent />
   </div>
 </template>
 
 <script>
-import NavBarComponent from './components/NavBarComponente.vue'
+import NavBarComponent from './components/NavBarComponent.vue'
+import SideBarComponent from './components/SideBarComponent.vue'
 
 export default {
   name: 'App',
   components: {
-    NavBarComponent
+    NavBarComponent,
+    SideBarComponent
   }
 }
 </script>
