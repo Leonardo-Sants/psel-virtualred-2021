@@ -1,7 +1,15 @@
 <template>
     <section>
-        <div>
+        <div class="headerRegister">
             <p>Template de diplomas cadastrados</p>
+            <b-button id="RegisterButton" size="sm" type="submit">Cadastrar</b-button>
+        </div>
+        <div>
+            <p></p>
+            <p></p>
+            <b-button id="RegisterButton" size="sm" type="submit">Data</b-button>
+            <b-button id="RegisterButton" size="sm" type="submit">Nome</b-button>
+            <b-button id="RegisterButton" size="sm" type="submit">Atualização</b-button>
         </div>
         <div class="overflow-auto">
 
@@ -19,8 +27,6 @@
             :per-page="perPage"
             aria-controls="my-table"
             ></b-pagination>
-
-            <p class="mt-3">Current Page: {{ currentPage }}</p>
 
         </div>
     </section>
@@ -65,15 +71,30 @@ section {
     align-items: center;
 }
 
-section p{
+.headerRegister {
+    width: 100%;   
     display: flex;
     align-items: initial;
     font-size: 28px;
     font-weight: 600;
 }
 
+.headerRegister p{
+    display: flex;
+    left: 20px;
+}
+
+.headerRegister #RegisterButton{
+    display: flex;
+    margin: 5px 250px;
+    height: 30px;
+    justify-content: center;
+    background-color: #000000;
+}
+
 .table{
     width: 900px;
+    margin-top: 100px;
 }
 
 
