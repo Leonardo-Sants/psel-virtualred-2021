@@ -11,7 +11,7 @@
         <b-navbar-nav  class="ml-auto">
           <b-nav-form >
             <b-input-group size="sm" class="Search" >
-               <b-icon  id="iconSearch" icon="search"></b-icon>
+              <b-button id="iconSearch" type="submit"><b-icon icon="search"></b-icon></b-button>
               <b-form-input  type="search"  placeholder="Buscar Funcionalidades"></b-form-input>
             </b-input-group>
           </b-nav-form>      
@@ -60,6 +60,7 @@ export default {
 .Search #iconSearch {
   color: #C4C4C4;
   background-color: #fff;
+  
   height: 30px;
 }
 
