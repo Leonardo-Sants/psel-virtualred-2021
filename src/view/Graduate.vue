@@ -2,14 +2,18 @@
     <section>
         <div class="headerRegister">
             <p>Template de diplomas cadastrados</p>
-            <b-button id="RegisterButton" size="sm" type="submit">Cadastrar</b-button>
+            <div class="BtnRegister">
+                <b-button id="RegisterButton" size="sm" type="submit">Cadastrar</b-button>
+            </div>
         </div>
-        <div>
-            <p></p>
-            <p></p>
-            <b-button id="RegisterButton" size="sm" type="submit">Data</b-button>
-            <b-button id="RegisterButton" size="sm" type="submit">Nome</b-button>
-            <b-button id="RegisterButton" size="sm" type="submit">Atualização</b-button>
+        <div class="Filter">
+            <p>Filter</p>
+            <p>Ordenar por</p>
+            <div class="BtnFilter">
+            <b-button id="B-Filter" size="sm" type="submit">Data</b-button>
+            <b-button id="B-Filter" size="sm" type="submit">Nome</b-button>
+            <b-button id="B-Filter" size="sm" type="submit">Atualização</b-button>
+            </div>
         </div>
         <div class="overflow-auto">
 
@@ -59,6 +63,7 @@ section {
     width: 85%;
     height: 100%;
     left: 15%;
+    padding: 15px;
     display: flex;
     flex-direction: column;
     position: absolute;
@@ -68,27 +73,42 @@ section {
 .headerRegister {
     width: 100%;   
     display: flex;
-    align-items: initial;
+    align-items: center;
     font-size: 28px;
     font-weight: 600;
 }
 
 .headerRegister p{
     display: flex;
+    width: 100%;
     left: 20px;
+    margin-top: 5px;
 }
 
-.headerRegister #RegisterButton{
+.BtnRegister #RegisterButton{
+    width: 100%;
     display: flex;
-    margin: 5px 250px;
-    height: 30px;
-    justify-content: center;
+    background-color: #000000;    
+}
+
+.Filter  {
+    width: 100%;
+    display: flex;
+    margin: 5px;
+    justify-content: space-between;
+}
+
+.Filter  p{
+   
+}
+
+.BtnFilter #B-Filter{
     background-color: #000000;
+    margin: 1px;
 }
 
 .table {
-    width: 1100px;
-    
+    width: 1100px;  
 }
 
 .Page {
