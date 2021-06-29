@@ -18,15 +18,16 @@
                 :items="items"
                 :per-page="perPage"
                 :current-page="currentPage"
-                small>
+                smal>
             </b-table>
 
-            <b-pagination
+            <b-pagination class="Page"
             v-model="currentPage"
             :total-rows="rows"
             :per-page="perPage"
             aria-controls="my-table"
             ></b-pagination>
+            
 
         </div>
     </section>
@@ -40,15 +41,8 @@
         perPage: 3,
         currentPage: 1,
         items: [
-          {  Titulo_do_diploma_a_ser_usado_pelo_template: 'Fred', Escola_que_usa_: 'Flintstone', Curso_que_usa_esse_diploma: '', },
-          {  Titulo_do_diploma_a_ser_usado_pelo_template: 'Wilma', Escola_que_usa_: 'Flintstone', Curso_que_usa_esse_diploma: '',},
-          {  Titulo_do_diploma_a_ser_usado_pelo_template: 'Barney', Escola_que_usa_: 'Rubble', Curso_que_usa_esse_diploma: '',},
-          {  Titulo_do_diploma_a_ser_usado_pelo_template: 'Betty', Escola_que_usa_: 'Rubble', Curso_que_usa_esse_diploma: '',},
-          {  Titulo_do_diploma_a_ser_usado_pelo_template: 'Pebbles', Escola_que_usa_: 'Flintstone', Curso_que_usa_esse_diploma: '',},
-          {  Titulo_do_diploma_a_ser_usado_pelo_template: 'Bamm Bamm', Escola_que_usa_: 'Rubble', Curso_que_usa_esse_diploma: '',},
-          {  Titulo_do_diploma_a_ser_usado_pelo_template: 'The Great', Escola_que_usa_: 'Gazzoo', Curso_que_usa_esse_diploma: '',},
-          {  Titulo_do_diploma_a_ser_usado_pelo_template: 'Rockhead', Escola_que_usa_: 'Slate', Curso_que_usa_esse_diploma: '',},
-          {  Titulo_do_diploma_a_ser_usado_pelo_template: 'Pearl', Escola_que_usa_: 'Slaghoople', Curso_que_usa_esse_diploma: '',}
+          {  Titulo_do_diploma_a_ser_usado_pelo_template: 'Fred', Escola_que_usa_esse_diploma: 'Flintstone',
+           Curso_que_usa_esse_diploma: '', N_de_usuários_associados: '', } 
         ]
       }
     },
@@ -92,9 +86,23 @@ section {
     background-color: #000000;
 }
 
-.table{
-    width: 900px;
-    margin-top: 100px;
+.table {
+    width: 1100px;
+    
+}
+
+.Page {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 250px;
+    color: #000000;
+}
+
+#my-table {
+    font-size: 12px;
+    margin: 100px 10px;
+    color: #3D3D3D;
 }
 
 
