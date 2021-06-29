@@ -18,11 +18,11 @@
         </b-navbar-nav>
       </b-collapse>
       <div>
-        <b-icon  id="iconAdmin" icon="person-square"></b-icon>
+        <b-icon class="h1 mb-2" id="iconAdmin" icon="person-square"></b-icon>
       </div>
       <div class="Admin">
         <b>Super Adim</b>
-        <b>Super Adim</b>
+        <b id="subAdmin">Super Adim</b>
       </div>
     </b-navbar>
   </div>
@@ -70,12 +70,17 @@ export default {
   align-items: center;
   margin: 15px;
   padding: 10px;
+  font-size: 16px;
+}
+
+.Admin #subAdmin {
+  color: #fff;
+  font-size: 10px;
 }
 
 #iconAdmin{
   color: #C4C4C4;
   display: flex;
-  margin: 10px;
 }
 
 </style>
