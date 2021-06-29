@@ -1,8 +1,8 @@
 <template>
   <div id="app">
     
-    <NavBarComponent />
-    <SideBarComponent />
+    <Nav-Bar-Component />
+    <Side-Bar-Component />
   </div>
 </template>
 
