@@ -49,6 +49,8 @@ export default {
   display: flex;
   width: 100%;
   height: 80px;
+  border: 1px solid #BFBFBF;
+  box-shadow: 5px 5px 5px #aaaaaa;
 }
 
 .Search {

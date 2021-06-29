@@ -7,12 +7,12 @@
             </div>
         </div>
         <div class="Filter">
-            <p>Filter</p>
+            <p><b-icon icon="funnel"></b-icon>Filter</p>
             <p>Ordenar por</p>
             <div class="BtnFilter">
             <b-button id="B-Filter" size="sm" type="submit">Data</b-button>
-            <b-button id="B-Filter" size="sm" type="submit">Nome</b-button>
-            <b-button id="B-Filter" size="sm" type="submit">Atualização</b-button>
+            <b-button id="B-FilterName" size="sm" type="submit">Nome</b-button>
+            <b-button id="B-FilterAtt" size="sm" type="submit">Atualização</b-button>
             </div>
         </div>
         <div class="overflow-auto">
@@ -45,8 +45,8 @@
         perPage: 3,
         currentPage: 1,
         items: [
-          {  Titulo_do_diploma_a_ser_usado_pelo_template: 'Fred', Escola_que_usa_esse_diploma: 'Flintstone',
-           Curso_que_usa_esse_diploma: '', N_de_usuários_associados: '', } 
+          {  Titulo_do_diploma_a_ser_usado_pelo_template: '', Escola_que_usa_esse_diploma: '',
+           Curso_que_usa_esse_diploma: '', N_de_usuários_associados: '', }
         ]
       }
     },
@@ -88,6 +88,7 @@ section {
 .BtnRegister #RegisterButton{
     width: 100%;
     display: flex;
+    border-radius: 7px;
     background-color: #000000;    
 }
 
@@ -99,16 +100,31 @@ section {
 }
 
 .Filter  p{
-   
+   color: #000000;
 }
 
 .BtnFilter #B-Filter{
     background-color: #000000;
-    margin: 1px;
+    margin: 0px 2px;
+    border-radius: 10px 0px 0px 10px;
+    width: 100px;
+}
+
+#B-FilterName, #B-FilterAtt {
+    background-color: #B28DD6;
+    width: 100px;
+}
+
+#B-FilterAtt {
+    border-radius: 0px 10px 10px 0px;
+    margin: 0px 2px;
 }
 
 .table {
     width: 1100px;  
+    background-color: #F9F9F9;
+    border-radius: 15px;
+    box-shadow: 10px 10px 5px #aaaaaa;
 }
 
 .Page {
@@ -119,10 +135,14 @@ section {
     color: #000000;
 }
 
+.page-item desable{
+    background-color: #000000;
+}
+
 #my-table {
     font-size: 12px;
     margin: 100px 10px;
-    color: #3D3D3D;
+    color: #000000;
 }
 
 
