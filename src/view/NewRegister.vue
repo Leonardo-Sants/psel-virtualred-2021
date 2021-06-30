@@ -16,11 +16,11 @@
             <b-button id="B-Verse" size="sm" type="submit">Verso</b-button>
         </div>
 
-        <el-dialog
+        <element-ui
             :visible.sync="dialogJPG"
             append-to-body>
             <canvas id="mycanvas" width="940" height="570"></canvas>
-        </el-dialog>
+        </element-ui>
 
         
 
@@ -32,7 +32,33 @@
 <script>  
   export default {
     name: 'NewRegister',
+    data() {
+        return {
+            canvas: null,
+            context: null,
+            width: 400,
+            height: 250,
+            isdrawing: null,
+            startX: 0,
+            startY: 0,
+            backGround: 'url("picture") no-repeat center'
+        }
+    },
+
+     mountend() {
+            var myCanvas=document.getElementById('myCanvas');
+             var ctx = myCanvas.getContext('2d');
+             ctx. Beginpath();
+             ctx.moveTo(700,50);
+             ctx.lineTo(900,50);
+             ctx.closePath();
+             ctx.lineWidth=2;
+             ctx.strokeStyle='blue';
+             CTX. Stroke()
+        },
+
   }
+
 </script>
 
 <style scoped>
