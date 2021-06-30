@@ -3,7 +3,7 @@
         <div class="headerRegister">
             <p>Template de diplomas cadastrados</p>
             <div class="BtnRegister">
-                <b-button id="RegisterButton" size="sm" type="submit">Cadastrar</b-button>
+                <b-button id="RegisterButton" size="sm" type="submit" ><a href="/Novo-Cadastro">Cadastrar</a></b-button>
             </div>
         </div>
         <div class="Filter">
@@ -89,7 +89,14 @@ section {
     width: 100%;
     display: flex;
     border-radius: 7px;
-    background-color: #000000;    
+    background-color: #000000; 
+    text-decoration: none; 
+    color: #fff;  
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
 }
 
 .Filter  {
