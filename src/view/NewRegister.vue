@@ -1,5 +1,6 @@
 <template>
     <section>
+
         <div class="headerRegister">
             <p>Cadastrar novo template</p>
             <div class="BtnSave">
@@ -15,14 +16,6 @@
             <b-button id="B-Verse" size="sm" type="submit">Verso</b-button>
         </div>
 
-        <div class="Quill">
-            <quill-editor
-            class="QuillEditor"
-            v-model="content"
-            :options="editorOption"
-            />
-        </div>
-       
     </section>
 </template>
 
@@ -96,12 +89,5 @@ section {
     width: 70px;
     background-color: #B28DD6;
 }
-
-.Quill {
-    width: 100%;
-    height: 30rem;
-    display: flex;
-}
-
 
 </style>
