@@ -7,9 +7,9 @@
             </div>
         </div>
 
-        <div class="example">
+        <div class="Quill">
             <quill-editor
-            class="editor"
+            class="QuillEditor"
             v-model="content"
             :options="editorOption"
             />
@@ -20,7 +20,7 @@
 
 
 
-<script>
+<script>  
   export default {
     name: 'NewRegister',
   }
@@ -58,6 +58,17 @@ section {
     display: flex;
     border-radius: 7px;
     background-color: #000000;    
+}
+
+.Quill {
+    width: 80%;
+    height: 30rem;
+    display: flex;
+    margin-right: 230px;
+}
+
+.QuillEditor {
+    width: 80%;
 }
 
 </style>
