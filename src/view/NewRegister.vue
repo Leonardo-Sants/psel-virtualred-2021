@@ -16,6 +16,14 @@
             <b-button id="B-Verse" size="sm" type="submit">Verso</b-button>
         </div>
 
+        <el-dialog
+            :visible.sync="dialogJPG"
+            append-to-body>
+            <canvas id="mycanvas" width="940" height="570"></canvas>
+        </el-dialog>
+
+        
+
     </section>
 </template>
 
@@ -88,6 +96,10 @@ section {
     margin: 0px 2px;
     width: 70px;
     background-color: #B28DD6;
+}
+
+#mycanvas {
+    border: 1px solid rgb(199, 198, 198);
 }
 
 </style>
