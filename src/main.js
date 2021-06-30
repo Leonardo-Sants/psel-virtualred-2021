@@ -5,7 +5,8 @@ import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap-vue/dist/bootstrap-vue.css';
 import router from './routes/router.js'
 import VueQuillEditor from 'vue-quill-editor'
-
+import 'quill/dist/quill.core.css'
+import 'quill/dist/quill.snow.css'
 
 
 Vue.use(BootstrapVue)

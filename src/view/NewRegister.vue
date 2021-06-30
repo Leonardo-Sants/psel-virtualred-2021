@@ -6,9 +6,19 @@
                 <b-button id="SaveButton" size="sm" type="submit">Salvar</b-button>
             </div>
         </div>
+
+        <div class="example">
+            <quill-editor
+            class="editor"
+            v-model="content"
+            :options="editorOption"
+            />
+        </div>
        
     </section>
 </template>
+
+
 
 <script>
   export default {
