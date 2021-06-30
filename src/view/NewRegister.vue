@@ -7,6 +7,14 @@
             </div>
         </div>
 
+        <div class="Edit">
+            <div>
+                <p>Editando:</p>
+            </div>
+            <b-button id="B-Front" size="sm" type="submit">Frente</b-button>
+            <b-button id="B-Verse" size="sm" type="submit">Verso</b-button>
+        </div>
+
         <div class="Quill">
             <quill-editor
             class="QuillEditor"
@@ -60,15 +68,40 @@ section {
     background-color: #000000;    
 }
 
-.Quill {
-    width: 80%;
-    height: 30rem;
+.Edit {
+    width: 100%;
     display: flex;
-    margin-right: 230px;
+    margin: 5px;
+    justify-content: flex-end;
+    margin-bottom: 10px;
 }
 
-.QuillEditor {
-    width: 80%;
+.Edit  p{
+   color: #989898;
+   display: flex;
+   margin: 5px;
 }
+
+.Edit #B-Front{
+    background-color: #000000;
+    margin: 0px 2px;
+    width: 70px;
+    border-radius: 10px 0px 0px 10px;
+    display: flex;
+}
+
+#B-Verse {
+    border-radius: 0px 10px 10px 0px;
+    margin: 0px 2px;
+    width: 70px;
+    background-color: #B28DD6;
+}
+
+.Quill {
+    width: 100%;
+    height: 30rem;
+    display: flex;
+}
+
 
 </style>
