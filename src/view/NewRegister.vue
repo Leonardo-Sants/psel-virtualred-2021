@@ -9,9 +9,12 @@
         </div>
 
         <div class="Edit">
-             <div>
-            <b-button id="B-Forms" size="sm" type="submit" @click="line()">Frente</b-button>
-            <b-button id="B-Camp" size="sm" type="submit" @click="text()()">Verso</b-button>
+             <div class="EditCanvas">
+            <b-button id="Canva-img" size="sm" type="submit" @click="line()">Subir Imagem</b-button>
+                 <p>Formas</p>
+            <b-button id="Canva-Forms" size="sm" type="submit" @click="line()">F</b-button>
+                <p>Campos</p>
+            <b-button id="Canva-text" size="sm" type="submit" @click="text()()">texto</b-button>
              </div> 
             <div>
                 <p>Editando:</p>
@@ -25,7 +28,7 @@
             <el-dialog
                 :visible.sync="dialogJPG"
                 append-to-body>
-                <canvas id="mycanvas" width="940" height="470"></canvas>
+                <canvas id="mycanvas" width="854" height="470"></canvas>
             </el-dialog>
         </div>
     </section>
@@ -91,7 +94,6 @@
             this.vueCanvas.fillText('Mary Waltman',700, 365)
             this.vueCanvas.fillText('School Principal',700, 375)
            
-           
         }
     }
   }
@@ -140,10 +142,28 @@ section {
     margin-bottom: 10px;
 }
 
+.EditCanvas{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.EditCanvas
+#Canva-Forms,
+#Canva-text {
+    margin: 0px 10px 0px 20px; 
+}
+
+.EditCanvas
+#Canva-img {
+    display: flex;
+    margin: 0px 60px ;
+}
+
 .Edit  p{
    color: #989898;
    display: flex;
-   margin: 5px;
+   margin: 0px 20px;
 }
 
 .Edit #B-Front{
@@ -164,6 +184,7 @@ section {
 #mycanvas {
     border: 1px solid rgb(199, 198, 198);
     color: #000000;
+    margin-right: 150px;
 }
 
 </style>
