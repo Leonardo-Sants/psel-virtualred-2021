@@ -9,21 +9,25 @@
         </div>
 
         <div class="Edit">
+             <div>
+            <b-button id="B-Forms" size="sm" type="submit" @click="line()">Frente</b-button>
+            <b-button id="B-Camp" size="sm" type="submit" @click="text()()">Verso</b-button>
+             </div> 
             <div>
                 <p>Editando:</p>
             </div>
-            <b-button id="B-Front" size="sm" type="submit">Frente</b-button>
+            <b-button id="B-Front" size="sm" type="submit" >Frente</b-button>
             <b-button id="B-Verse" size="sm" type="submit">Verso</b-button>
+        </div>   
+ 
+        <div>
+           
+            <el-dialog
+                :visible.sync="dialogJPG"
+                append-to-body>
+                <canvas id="mycanvas" width="940" height="470">hello</canvas>
+            </el-dialog>
         </div>
-
-        <element-ui
-            :visible.sync="dialogJPG"
-            append-to-body>
-            <canvas id="mycanvas" width="940" height="570"></canvas>
-        </element-ui>
-
-        
-
     </section>
 </template>
 
@@ -32,33 +36,41 @@
 <script>  
   export default {
     name: 'NewRegister',
-    data() {
-        return {
-            canvas: null,
-            context: null,
-            width: 400,
-            height: 250,
-            isdrawing: null,
-            startX: 0,
-            startY: 0,
-            backGround: 'url("picture") no-repeat center'
+    data(){
+        return{
+            vueCanvas: null,
+            rectWidth: 200,
         }
     },
+    mounted() {
+        var c = document.getElementById("mycanvas");
+        var ctx = c.getContext("2d");    
+        this.vueCanvas = ctx;    
+    },
 
-     mountend() {
-            var myCanvas=document.getElementById('myCanvas');
-             var ctx = myCanvas.getContext('2d');
-             ctx. Beginpath();
-             ctx.moveTo(700,50);
-             ctx.lineTo(900,50);
-             ctx.closePath();
-             ctx.lineWidth=2;
-             ctx.strokeStyle='blue';
-             CTX. Stroke()
+    methods: {
+        line() {
+        this.vueCanvas.beginPath (); 
+        this.vueCanvas.rect (50, 100, this.rectWidth, 1); 
+        this.vueCanvas.stroke (); 
         },
 
-  }
+        lines() {
+            this.vueCanvas.moveTo(10,20) 
+            this.vueCanvas.lineTo(10,20)
+            this.vueCanvas.strokeStyle = "red"
+            this.vueCanvas.lineWidth = 3;
+            this.vueCanvas.stroke()
+        },
 
+        text(text,x,y) {
+            this.vueCanvas.font = "26px Arial bolder"
+            this.vueCanvas.fillStyle = 'red'
+            this.vueCanvas.fillText(text,x,y)
+        }
+    }
+  }
+    
 </script>
 
 <style scoped>
@@ -126,6 +138,7 @@ section {
 
 #mycanvas {
     border: 1px solid rgb(199, 198, 198);
+    color: #000000;
 }
 
 </style>
