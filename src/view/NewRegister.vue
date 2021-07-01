@@ -25,7 +25,7 @@
             <el-dialog
                 :visible.sync="dialogJPG"
                 append-to-body>
-                <canvas id="mycanvas" width="940" height="470">hello</canvas>
+                <canvas id="mycanvas" width="940" height="470"></canvas>
             </el-dialog>
         </div>
     </section>
@@ -51,22 +51,19 @@
     methods: {
         line() {
         this.vueCanvas.beginPath (); 
-        this.vueCanvas.rect (50, 100, this.rectWidth, 1); 
+        this.vueCanvas.rect (150, 350, this.rectWidth, 1); 
+        this.vueCanvas.stroke (); 
+
+        this.vueCanvas.beginPath (); 
+        this.vueCanvas.rect (600, 350, this.rectWidth, 1); 
         this.vueCanvas.stroke (); 
         },
 
-        lines() {
-            this.vueCanvas.moveTo(10,20) 
-            this.vueCanvas.lineTo(10,20)
-            this.vueCanvas.strokeStyle = "red"
-            this.vueCanvas.lineWidth = 3;
-            this.vueCanvas.stroke()
-        },
-
-        text(text,x,y) {
-            this.vueCanvas.font = "26px Arial bolder"
-            this.vueCanvas.fillStyle = 'red'
-            this.vueCanvas.fillText(text,x,y)
+        text() {
+            this.vueCanvas.beginPath();
+            this.vueCanvas. Font ='800px Microsoft YaHei '
+            this.vueCanvas.fillText('High School Graduation Diploma',350,100)
+           
         }
     }
   }
