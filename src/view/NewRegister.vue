@@ -51,18 +51,46 @@
     methods: {
         line() {
         this.vueCanvas.beginPath (); 
-        this.vueCanvas.rect (150, 350, this.rectWidth, 1); 
+        this.vueCanvas.rect (110, 350, this.rectWidth, 1); 
         this.vueCanvas.stroke (); 
 
         this.vueCanvas.beginPath (); 
-        this.vueCanvas.rect (600, 350, this.rectWidth, 1); 
+        this.vueCanvas.rect (630, 350, this.rectWidth, 1); 
         this.vueCanvas.stroke (); 
         },
 
         text() {
             this.vueCanvas.beginPath();
             this.vueCanvas. Font ='800px Microsoft YaHei '
-            this.vueCanvas.fillText('High School Graduation Diploma',350,100)
+            this.vueCanvas.fillText('High School Graduation Diploma',400,50)
+
+            this.vueCanvas.beginPath();
+            this.vueCanvas. Font ='800px Microsoft YaHei '
+            this.vueCanvas.fillText('This certifies that',430,100)
+
+            this.vueCanvas.beginPath();
+            this.vueCanvas. Font ='800px Microsoft YaHei '
+            this.vueCanvas.fillText('Chris O. Christoferson',420,150)
+            this.vueCanvas.beginPath();
+            this.vueCanvas. Font ='800px Microsoft YaHei '
+            this.vueCanvas.fillText('This certifies that',430,100)
+
+            this.vueCanvas.beginPath();
+            this.vueCanvas. Font ='800px Microsoft YaHei '
+            this.vueCanvas.fillText('Chris O. Christoferson',420,150)
+
+            this.vueCanvas.beginPath();
+            this.vueCanvas. Font ='800px Microsoft YaHei '
+            this.vueCanvas.fillText('has completed all the requirements of the',390,190)
+            this.vueCanvas.fillText('curriculum of Timpton High School.',400,200)
+
+            this.vueCanvas.beginPath();
+            this.vueCanvas. Font ='800px Microsoft YaHei '
+            this.vueCanvas.fillText('Takehiro Kanegi',180, 365)
+            this.vueCanvas.fillText('University Director',180, 375)
+            this.vueCanvas.fillText('Mary Waltman',700, 365)
+            this.vueCanvas.fillText('School Principal',700, 375)
+           
            
         }
     }
