@@ -10,11 +10,12 @@
 
         <div class="Edit">
              <div class="EditCanvas">
-            <b-button id="Canva-img" size="sm" type="submit" @click="line()">Subir Imagem</b-button>
-                 <p>Formas</p>
-            <b-button id="Canva-Forms" size="sm" type="submit" @click="line()">F</b-button>
-                <p>Campos</p>
-            <b-button id="Canva-text" size="sm" type="submit" @click="text()()">texto</b-button>
+            <b-button id="Canva-img" size="sm" type="submit" @click="line()">Subir Imagem <div id="icon-up"><b-icon  icon="image"></b-icon></div></b-button>
+                 <p>Formas:</p>
+            <b-button id="Canva-Forms" size="sm" type="submit" @click="line()"><b-icon id="icon" icon="star"></b-icon></b-button>
+                <p>Campos:</p>
+            <b-button id="Canva-text" size="sm" type="submit" @click="text()">T</b-button>
+            <b-button id="Canva-text" size="sm" type="submit" ><b-icon id="icon" icon="image"></b-icon></b-button>
              </div> 
             <div>
                 <p>Editando:</p>
@@ -151,19 +152,34 @@ section {
 .EditCanvas
 #Canva-Forms,
 #Canva-text {
-    margin: 0px 10px 0px 20px; 
+    margin: 0px 5px 0px 20px; 
+    border-radius: 50%;
+    width: 35px;
+    background-color: #68A35D;
 }
 
 .EditCanvas
 #Canva-img {
     display: flex;
     margin: 0px 60px ;
+    border-radius: 8px;
+    width: 19%;
+    background-color: #000;
+}
+
+#icon {
+    color: #fff;
+}
+
+#icon-up {
+    display: flex;
+    margin-left: 40px;
 }
 
 .Edit  p{
    color: #989898;
    display: flex;
-   margin: 0px 20px;
+   margin: 0px 15px;
 }
 
 .Edit #B-Front{
@@ -184,6 +200,7 @@ section {
 #mycanvas {
     border: 1px solid rgb(199, 198, 198);
     color: #000000;
+    margin-top: 25px;
     margin-right: 150px;
 }
 
