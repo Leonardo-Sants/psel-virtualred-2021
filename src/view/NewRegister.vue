@@ -38,7 +38,9 @@
             </el-dialog>
         </div>
 
-        <b-button id="V-Camp">Vincular Campo</b-button>
+        <div class="V-Camp">
+            <b-button id="V-Camp">Vincular Campo<b-icon id="V-CampIcon" icon="server"></b-icon></b-button>
+        </div>
     </section>
 </template>
 
@@ -87,7 +89,7 @@
             this.vueCanvas.fillText('High School Graduation Diploma',400,50)
 
             this.vueCanvas.beginPath();
-            this.vueCanvas.fillStyle ='800px Microsoft YaHei '
+            this.vueCanvas.Font ='800px Microsoft YaHei '
             this.vueCanvas.fillText('This certifies that',430,100)
 
             this.vueCanvas.beginPath();
@@ -220,6 +222,7 @@ section {
     color: #000000;
     margin-top: 25px;
     margin-right: 150px;
+    font-size: 50px;
 }
 
 .Line {
@@ -248,12 +251,24 @@ section {
 
 }
 
-#V-Camp {
+.V-Camp {
     position: absolute;
-    width: 170px;
+    width: 100%;
     height: 36px;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 450px;
+    
+}
+
+.V-Camp #V-Camp {
     background-color: #B28DD6;
     border-radius: 8px;
+    box-shadow: 5px 5px 5px #aaaaaa;
+    margin-right: 40px;
+    display: flex;
+    align-items: center;
 }
+
 
 </style>
