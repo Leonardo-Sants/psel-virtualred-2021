@@ -43,24 +43,27 @@
             </b-icon></b-button>
         </div>
 
-        <b-modal id="modal-1" title="BootstrapVue">
+        <div class="modal">
+            <b-modal centered class="dropDown" id="modal-xl" size="xl">
+                <p class="my-4">Hello from modal!</p>
+                <b-button-group class="mt-3">
+                    <b-button size="lg" variant="light" width="500px" id="escola">Escola</b-button>
+                    <b-dropdown size="lg" variant="light" class="mx-1" right text="menu">
+                        <b-dropdown-item>Item 1</b-dropdown-item>
+                        <b-dropdown-item>Item 2</b-dropdown-item>
+                        <b-dropdown-item>Item 3</b-dropdown-item>
+                    </b-dropdown>
+                </b-button-group>
             
-        </b-modal>
+            </b-modal>
+        </div>
 
-          
-        <b-modal class="dropDown" id="modal-xl" size="xl">
-            <p class="my-4">Hello from modal!</p>
-            <b-button-group class="mx-1">
-                <b-button size="lg" variant="primary" width="500px" id="escola">Escola</b-button>
-                <b-dropdown class="mx-1" right text="menu">
-                    <b-dropdown-item>Item 1</b-dropdown-item>
-                    <b-dropdown-item>Item 2</b-dropdown-item>
-                    <b-dropdown-item>Item 3</b-dropdown-item>
-                </b-dropdown>
-            </b-button-group>
-          
-        </b-modal>
-    
+        <b-button @click="styleModal()">teste modal</b-button>
+        <div  class="testeModal">
+            <p >teste de exibição do modal</p>
+            <button @click="closeModal()">fechar</button>
+        </div>
+
     </section>
 </template>
 
@@ -73,6 +76,7 @@
         return{
             vueCanvas: null,
             rectWidth: 200,
+            testeModal: false
         }
     },
     mounted() {
@@ -82,8 +86,14 @@
     },
 
     methods: {
-        vincular () {
-           
+        styleModal () {
+            let modal = document.querySelector('.testeModal')
+            modal.style.display = ('block');
+        },
+
+        closeModal() {
+              let modal = document.querySelector('.testeModal')
+            modal.style.display = ('none');
         },
       
         line() {
@@ -288,7 +298,7 @@ section {
     height: 40px;
 }
 
-#Tela-Vincular {
+.testeModal {
     display: none;
     align-items: center;
     justify-content: center;
@@ -300,7 +310,7 @@ section {
     margin-top: 50px;
 }
 
-b-modal .escola {
+.modal {
     background-color: blue;
 }
 
