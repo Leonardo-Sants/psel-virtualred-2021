@@ -39,8 +39,13 @@
         </div>
 
         <div class="V-Camp">
-            <b-button id="V-Camp">Vincular Campo<b-icon id="V-CampIcon" icon="server"></b-icon></b-button>
+             <b-button id="V-Camp" v-b-modal.modal-1>Vincular Campo<b-icon id="V-CampIcon" icon="server"></b-icon></b-button>
         </div>
+
+        <b-modal id="modal-1" title="BootstrapVue">
+            <p class="my-4">Hello from modal!</p>
+        </b-modal>
+    
     </section>
 </template>
 
@@ -59,13 +64,11 @@
         var c = document.getElementById("mycanvas");
         var ctx = c.getContext("2d");    
         this.vueCanvas = ctx;  
-        
-        
     },
 
     methods: {
         vincular () {
-            
+           
         },
       
         line() {
@@ -270,5 +273,16 @@ section {
     height: 40px;
 }
 
+#Tela-Vincular {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background-color: #000000;
+    color: #fff;
+    width: 800px;
+    height: 450px;
+    position: absolute;
+    margin-top: 50px;
+}
 
 </style>
