@@ -48,14 +48,17 @@
         </b-modal>
 
           
-        <b-modal id="modal-xl" size="xl">
+        <b-modal class="dropDown" id="modal-xl" size="xl">
             <p class="my-4">Hello from modal!</p>
-            <b-dropdown class="mx-1" right text="Escola menu">
-                
-                <b-dropdown-item>Item 1</b-dropdown-item>
-                <b-dropdown-item>Item 2</b-dropdown-item>
-                <b-dropdown-item>Item 3</b-dropdown-item>
-            </b-dropdown>
+            <b-button-group class="mx-1">
+                <b-button size="lg" variant="primary" width="500px" id="escola">Escola</b-button>
+                <b-dropdown class="mx-1" right text="menu">
+                    <b-dropdown-item>Item 1</b-dropdown-item>
+                    <b-dropdown-item>Item 2</b-dropdown-item>
+                    <b-dropdown-item>Item 3</b-dropdown-item>
+                </b-dropdown>
+            </b-button-group>
+          
         </b-modal>
     
     </section>
@@ -295,6 +298,10 @@ section {
     height: 450px;
     position: absolute;
     margin-top: 50px;
+}
+
+b-modal .escola {
+    background-color: blue;
 }
 
 </style>
