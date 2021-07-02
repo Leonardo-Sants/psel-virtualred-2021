@@ -39,11 +39,23 @@
         </div>
 
         <div class="V-Camp">
-             <b-button id="V-Camp" v-b-modal.modal-1>Vincular Campo<b-icon id="V-CampIcon" icon="server"></b-icon></b-button>
+            <b-button id="V-Camp" v-b-modal.modal-xl>Vincular Campo<b-icon id="V-CampIcon" icon="server">
+            </b-icon></b-button>
         </div>
 
         <b-modal id="modal-1" title="BootstrapVue">
+            
+        </b-modal>
+
+          
+        <b-modal id="modal-xl" size="xl">
             <p class="my-4">Hello from modal!</p>
+            <b-dropdown class="mx-1" right text="Escola menu">
+                
+                <b-dropdown-item>Item 1</b-dropdown-item>
+                <b-dropdown-item>Item 2</b-dropdown-item>
+                <b-dropdown-item>Item 3</b-dropdown-item>
+            </b-dropdown>
         </b-modal>
     
     </section>

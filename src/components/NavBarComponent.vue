@@ -7,7 +7,6 @@
       <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
       <b-collapse id="nav-collapse" is-nav>
-        
         <b-navbar-nav  class="ml-auto">
           <b-nav-form >
             <b-input-group size="sm" class="Search" >
@@ -17,6 +16,7 @@
           </b-nav-form>      
         </b-navbar-nav>
       </b-collapse>
+
       <div>
         <b-icon class="h1 mb-2" id="iconAdmin" icon="person-square"></b-icon>
       </div>
@@ -25,6 +25,7 @@
         <b id="subAdmin">Super Adim</b>
       </div>
     </b-navbar>
+
   </div>
 
   
