@@ -10,7 +10,7 @@
 
         <div class="Edit">
              <div class="EditCanvas">
-            <b-button id="Canva-img" size="sm" type="submit" @click="line()">Subir Imagem <div id="icon-up"><b-icon  icon="image"></b-icon></div></b-button>
+            <b-button id="Canva-img" size="sm" type="submit" @click="img()">Subir Imagem <div id="icon-up"><b-icon  icon="image"></b-icon></div></b-button>
                  <p>Formas:</p>
             <b-button id="Canva-Forms" size="sm" type="submit" @click="line()"><b-icon id="icon" icon="star"></b-icon></b-button>
                 <p>Campos:</p>
@@ -23,6 +23,11 @@
             <b-button id="B-Front" size="sm" type="submit" >Frente</b-button>
             <b-button id="B-Verse" size="sm" type="submit">Verso</b-button>
         </div>   
+
+        <div class="Line">
+            <hr class="linha-vertical">
+            <p id="text-line">Diploma</p>
+        </div>
  
         <div>
            
@@ -32,6 +37,8 @@
                 <canvas id="mycanvas" width="854" height="470"></canvas>
             </el-dialog>
         </div>
+
+        <b-button id="V-Camp">Vincular Campo</b-button>
     </section>
 </template>
 
@@ -49,27 +56,38 @@
     mounted() {
         var c = document.getElementById("mycanvas");
         var ctx = c.getContext("2d");    
-        this.vueCanvas = ctx;    
+        this.vueCanvas = ctx;  
+        
+        
+    },
+
+    computed : {
+        
     },
 
     methods: {
-        line() {
-        this.vueCanvas.beginPath (); 
-        this.vueCanvas.rect (110, 350, this.rectWidth, 1); 
-        this.vueCanvas.stroke (); 
+        img() {
+            this.img.drawImage(this.vueCanvas,0,0);
+            this.vueCanvas.src = "./assets/imgLogo.jpg";
+        },
 
-        this.vueCanvas.beginPath (); 
-        this.vueCanvas.rect (630, 350, this.rectWidth, 1); 
-        this.vueCanvas.stroke (); 
+        line() {
+            this.vueCanvas.beginPath (); 
+            this.vueCanvas.rect (110, 350, this.rectWidth, 1); 
+            this.vueCanvas.stroke (); 
+
+            this.vueCanvas.beginPath (); 
+            this.vueCanvas.rect (630, 350, this.rectWidth, 1); 
+            this.vueCanvas.stroke (); 
         },
 
         text() {
             this.vueCanvas.beginPath();
-            this.vueCanvas. Font ='800px Microsoft YaHei '
+            this.vueCanvas.Font ='800px Microsoft YaHei '
             this.vueCanvas.fillText('High School Graduation Diploma',400,50)
 
             this.vueCanvas.beginPath();
-            this.vueCanvas. Font ='800px Microsoft YaHei '
+            this.vueCanvas.fillStyle ='800px Microsoft YaHei '
             this.vueCanvas.fillText('This certifies that',430,100)
 
             this.vueCanvas.beginPath();
@@ -97,8 +115,8 @@
            
         }
     }
-  }
-    
+  
+}   
 </script>
 
 <style scoped>
@@ -202,6 +220,40 @@ section {
     color: #000000;
     margin-top: 25px;
     margin-right: 150px;
+}
+
+.Line {
+    display: flex;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.Line #text-line{
+    color: #fff;
+    background-color: #000000;
+    border-radius: 8px;
+    margin-left: 60px;
+    width: 78px;
+    height: 20px;
+    margin-top: 5px;
+    font-size: 12px;
+    text-align: center;  
+    position: absolute; 
+    font-weight: 600;
+}
+
+.linha-vertical {
+    width: 100%;
+     border: 1px dashed #C4C4C4;
+
+}
+
+#V-Camp {
+    position: absolute;
+    width: 170px;
+    height: 36px;
+    background-color: #B28DD6;
+    border-radius: 8px;
 }
 
 </style>
