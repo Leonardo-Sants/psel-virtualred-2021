@@ -23,7 +23,7 @@ export default {
 <style scoped>
 .sideBar{
   width: 15%;
-  height: 100%;
+  height: 780px;
   position: absolute;
   background-color: #F9F9F9;
   border: 1px solid #BFBFBF;

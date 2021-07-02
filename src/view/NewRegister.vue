@@ -34,7 +34,7 @@
             <el-dialog
                 :visible.sync="dialogJPG"
                 append-to-body>
-                <canvas id="mycanvas" width="854" height="470"></canvas>
+                <canvas id="mycanvas"  width= "800px" height="550px"></canvas>
             </el-dialog>
         </div>
 
@@ -63,16 +63,11 @@
         
     },
 
-    computed : {
-        
-    },
-
     methods: {
-        img() {
-            this.img.drawImage(this.vueCanvas,0,0);
-            this.vueCanvas.src = "./assets/imgLogo.jpg";
+        vincular () {
+            
         },
-
+      
         line() {
             this.vueCanvas.beginPath (); 
             this.vueCanvas.rect (110, 350, this.rectWidth, 1); 
@@ -221,8 +216,10 @@ section {
     border: 1px solid rgb(199, 198, 198);
     color: #000000;
     margin-top: 25px;
-    margin-right: 150px;
+    margin-right: 190px;
     font-size: 50px;
+    width: 800px;
+    height: 550px;
 }
 
 .Line {
@@ -257,7 +254,7 @@ section {
     height: 36px;
     display: flex;
     justify-content: flex-end;
-    margin-top: 450px;
+    margin-top: 550px;
     
 }
 
@@ -268,6 +265,9 @@ section {
     margin-right: 40px;
     display: flex;
     align-items: center;
+    justify-content: space-around;
+    width: 180px;
+    height: 40px;
 }
 
 
