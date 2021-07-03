@@ -80,7 +80,8 @@
                 <div class="modalCamp1">
                     <div>-> -> Aluno</div>
                     <div id="Camp1">Mais específico<b-button id="I-Camp1"><b-icon id="I-Camp1" icon="triangle-fill" rotate="180">
-                    </b-icon></b-button>Campos<b-button id="I-Camp1"><b-icon id="I-Camp1" icon="x" rotate="45">
+                    </b-icon>
+                    </b-button>Campos<b-button id="I-Camp1" @click=" modalCampAluno()" ><b-icon id="I-Camp1" icon="x" rotate="45">
                     </b-icon></b-button>
                     </div>
                 </div>
@@ -93,7 +94,7 @@
                     <b-button id="B-ModalCampAluno">Documento</b-button>
                     </div>
                     <div class="B-CampVincular">
-                    <b-button id="B-ModalCampAlunoVincular" @click="closeModal()">Vincular<b-icon id="I-ModalCampAlunoVincular" icon="triangle-fill" rotate="90">
+                    <b-button id="B-ModalCampAlunoVincular" @click="closeModal() != closeCampDrop()">Vincular<b-icon id="I-ModalCampAlunoVincular" icon="triangle-fill" rotate="90">
                     </b-icon></b-button>
                     </div>
                 </div>
@@ -128,15 +129,25 @@
             modal.style.display = ('block');
         },
 
+        closeModal() {
+            let modal = document.querySelector('.Modal')
+            modal.style.display = ('none');
+        },
+
         CampDrop() {
             let drop = document.querySelector('.CampDropdown');
             drop.style.display = ('block');
+        },
+
+        closeCampDrop() {
+            let drop = document.querySelector('.CampDropdown');
+            drop.style.display = ('none');
         }, 
 
-        closeModal() {
-              let modal = document.querySelector('.Modal')
-            modal.style.display = ('none');
-        },
+        modalCampAluno() {
+            let dropAluno = document.querySelector('.ModalCampAluno');
+            dropAluno.style.display = ('block');
+        },    
       
         line() {
             this.vueCanvas.beginPath (); 
@@ -356,7 +367,7 @@ section {
     width: 766px;
     height: 54px;
     display: flex;
-    margin: 30px 10px;
+    margin: 20px 10px;
     padding: 15px;
     align-items: center;
     color: #000000;
@@ -389,12 +400,16 @@ section {
     display: none;
 }
 
+.ModalCampAluno{
+    display: none;
+}
+
 .ModalCampAluno #B-ModalCampAluno {
     color: #000;
     background-color: transparent;
     width: 140px;
     height: 46px;
-    margin: 20px 10px 10px 30px;
+    margin: 20px 10px 10px 15px;
     border-radius: 8px;
     border: 1.5px solid #000;
     font: 16px;
@@ -413,8 +428,10 @@ section {
     justify-content: space-between;
     width: 205px;
     height: 40px;
-    margin-left: 500px;
+    margin-left: 550px;
     background-color: #000;
+    border-radius: 8px;
+    margin-top: 55px;
 }
 
 #I-ModalCampAlunoVincular {
