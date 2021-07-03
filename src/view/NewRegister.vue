@@ -46,16 +46,11 @@
         <div  class="testeModal">
             <p >teste de exibição do modal</p>
             <div class="modalCamp1">
-                <b-button-group>
-                    <p>Escola</p>
-                    <b-button  variant="outline-primary">Button</b-button>
-                    <b-dropdown  variant="outline-primary" right text="Split Menu">
-                    <b-dropdown-item>Item 1</b-dropdown-item>
-                    <b-dropdown-item>Item 2</b-dropdown-item>
-                    <b-dropdown-divider></b-dropdown-divider>
-                    <b-dropdown-item>Item 3</b-dropdown-item>
-                    </b-dropdown>
-                </b-button-group>
+                <div>Escola</div>
+                <div id="Camp1">Mais específico<b-button id="I-Camp1"><b-icon id="I-Camp1" icon="triangle-fill" rotate="180">
+                </b-icon></b-button>Campos<b-button id="I-Camp1"><b-icon id="I-Camp1" icon="x" rotate="45">
+                </b-icon></b-button>
+                </div>
             </div>
             <button @click="closeModal()">fechar</button>
         </div>
@@ -312,13 +307,26 @@ section {
     height: 54px;
     display: flex;
     margin: 10px;
+    padding: 15px;
     align-items: center;
-    justify-content: center;
     color: #000000;
     background-color: #F9F9F9;
     box-shadow: 10px 10px 15px 15px #aaaaaa;
     border-radius: 8px;
     border-color: #000000;
+}
+
+#Camp1 {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin: 450px;
+    position: absolute;
+    font-size: 14px;
+}
+
+#I-Camp1 {
+    background-color: blue;
 }
 
 </style>
