@@ -85,17 +85,20 @@
                     </div>
                 </div>
 
-                <div class="modalCamp1">
+                <div class="ModalCampAluno">
                     <div>
-                    <b-button></b-button>
-                    <b-button></b-button>
-                    <b-button></b-button>
-                    <b-button></b-button>
+                    <b-button id="B-ModalCampAluno">Nome</b-button>
+                    <b-button id="B-ModalCampAluno">Idade</b-button>
+                    <b-button id="B-ModalCampAluno">Genero</b-button>
+                    <b-button id="B-ModalCampAluno">Documento</b-button>
+                    </div>
+                    <div class="B-CampVincular">
+                    <b-button id="B-ModalCampAlunoVincular" @click="closeModal()">Vincular<b-icon id="I-ModalCampAlunoVincular" icon="triangle-fill" rotate="90">
+                    </b-icon></b-button>
                     </div>
                 </div>
 
                 </div>
-                <button @click="closeModal()">fechar</button>
         </div>
 
     </section>
@@ -384,6 +387,38 @@ section {
 
 .CampDropdown {
     display: none;
+}
+
+.ModalCampAluno #B-ModalCampAluno {
+    color: #000;
+    background-color: transparent;
+    width: 140px;
+    height: 46px;
+    margin: 20px 10px 10px 30px;
+    border-radius: 8px;
+    border: 1.5px solid #000;
+    font: 16px;
+    font-weight:500;
+}
+
+#B-ModalCampAluno:hover {
+    background-color: #B28DD6;
+    color: #fff;
+    border: none;
+}
+
+#B-ModalCampAlunoVincular {
+    display: flex;
+    align-items: initial;
+    justify-content: space-between;
+    width: 205px;
+    height: 40px;
+    margin-left: 500px;
+    background-color: #000;
+}
+
+#I-ModalCampAlunoVincular {
+    display: flex;
 }
 
 </style>
