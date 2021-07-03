@@ -46,6 +46,15 @@
         <div  class="testeModal">
             <div class="modalCamp1">
                 <div>Escola</div>
+                <div id="Camp1">Mais específico<b-button id="I-Camp1" @click=" CampDrop(false)"><b-icon id="I-Camp1" icon="triangle-fill" rotate="180">
+                </b-icon></b-button>Campos<b-button id="I-Camp1"><b-icon id="I-Camp1" icon="x" rotate="45">
+                </b-icon></b-button>
+                </div>
+            </div>
+
+            <div class="CampDropdown">
+             <div class="modalCamp1">
+                <div>-> Reitor</div>
                 <div id="Camp1">Mais específico<b-button id="I-Camp1"><b-icon id="I-Camp1" icon="triangle-fill" rotate="180">
                 </b-icon></b-button>Campos<b-button id="I-Camp1"><b-icon id="I-Camp1" icon="x" rotate="45">
                 </b-icon></b-button>
@@ -53,7 +62,7 @@
             </div>
 
              <div class="modalCamp1">
-                <div>Reitor</div>
+                <div>-> -> Curso</div>
                 <div id="Camp1">Mais específico<b-button id="I-Camp1"><b-icon id="I-Camp1" icon="triangle-fill" rotate="180">
                 </b-icon></b-button>Campos<b-button id="I-Camp1"><b-icon id="I-Camp1" icon="x" rotate="45">
                 </b-icon></b-button>
@@ -61,7 +70,7 @@
             </div>
 
              <div class="modalCamp1">
-                <div>Curso</div>
+                <div>-> -> Cordenador</div>
                 <div id="Camp1">Mais específico<b-button id="I-Camp1"><b-icon id="I-Camp1" icon="triangle-fill" rotate="180">
                 </b-icon></b-button>Campos<b-button id="I-Camp1"><b-icon id="I-Camp1" icon="x" rotate="45">
                 </b-icon></b-button>
@@ -69,19 +78,12 @@
             </div>
 
              <div class="modalCamp1">
-                <div>Cordenador</div>
+                <div>-> -> Aluno</div>
                 <div id="Camp1">Mais específico<b-button id="I-Camp1"><b-icon id="I-Camp1" icon="triangle-fill" rotate="180">
                 </b-icon></b-button>Campos<b-button id="I-Camp1"><b-icon id="I-Camp1" icon="x" rotate="45">
                 </b-icon></b-button>
                 </div>
             </div>
-
-             <div class="modalCamp1">
-                <div>Aluno</div>
-                <div id="Camp1">Mais específico<b-button id="I-Camp1"><b-icon id="I-Camp1" icon="triangle-fill" rotate="180">
-                </b-icon></b-button>Campos<b-button id="I-Camp1"><b-icon id="I-Camp1" icon="x" rotate="45">
-                </b-icon></b-button>
-                </div>
             </div>
             <button @click="closeModal()">fechar</button>
         </div>
@@ -109,9 +111,14 @@
 
     methods: {
         styleModal () {
-            let modal = document.querySelector('.testeModal')
+            let modal = document.querySelector('.testeModal');
             modal.style.display = ('block');
         },
+
+        CampDrop() {
+            let drop = document.querySelector('.CampDropdown');
+            drop.style.display = ('block');
+        }, 
 
         closeModal() {
               let modal = document.querySelector('.testeModal')
@@ -337,12 +344,12 @@ section {
     width: 766px;
     height: 54px;
     display: flex;
-    margin: 10px;
+    margin: 30px 10px;
     padding: 15px;
     align-items: center;
     color: #000000;
     background-color: #F9F9F9;
-    box-shadow: 10px 10px 15px 15px #aaaaaa;
+    box-shadow: 10px 10px 10px #aaaaaa;
     border-radius: 8px;
     border-color: #000000;
     font-weight: 500;
@@ -364,6 +371,10 @@ section {
     border: none;
     font-size: 20px;
     margin: 5px;
+}
+
+.CampDropdown {
+    display: none;
 }
 
 </style>
