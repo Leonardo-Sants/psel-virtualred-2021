@@ -42,50 +42,60 @@
              <b-button id="V-Camp"  @click="styleModal()">Vincular Campo<b-icon id="V-CampIcon" icon="server">
             </b-icon></b-button>
         </div>
-       
-        <div  class="testeModal">
-            <div class="modalCamp1">
-                <div>Escola</div>
-                <div id="Camp1">Mais específico<b-button id="I-Camp1" @click=" CampDrop(false)"><b-icon id="I-Camp1" icon="triangle-fill" rotate="180">
-                </b-icon></b-button>Campos<b-button id="I-Camp1"><b-icon id="I-Camp1" icon="x" rotate="45">
-                </b-icon></b-button>
+    
+        <div  class="Modal">
+                <div class="modalCamp1">
+                    <div>Escola</div>
+                    <div id="Camp1">Mais específico<b-button id="I-Camp1" @click=" CampDrop()"><b-icon id="I-Camp1" icon="triangle-fill" rotate="180">
+                    </b-icon></b-button>Campos<b-button id="I-Camp1"><b-icon id="I-Camp1" icon="x" rotate="45">
+                    </b-icon></b-button>
+                    </div>
                 </div>
-            </div>
 
-            <div class="CampDropdown">
-             <div class="modalCamp1">
-                <div>-> Reitor</div>
-                <div id="Camp1">Mais específico<b-button id="I-Camp1"><b-icon id="I-Camp1" icon="triangle-fill" rotate="180">
-                </b-icon></b-button>Campos<b-button id="I-Camp1"><b-icon id="I-Camp1" icon="x" rotate="45">
-                </b-icon></b-button>
+                <div class="CampDropdown">
+                <div class="modalCamp1">
+                    <div>-> Reitor</div>
+                    <div id="Camp1">Mais específico<b-button id="I-Camp1"><b-icon id="I-Camp1" icon="triangle-fill" rotate="180">
+                    </b-icon></b-button>Campos<b-button id="I-Camp1"><b-icon id="I-Camp1" icon="x" rotate="45">
+                    </b-icon></b-button>
+                    </div>
                 </div>
-            </div>
 
-             <div class="modalCamp1">
-                <div>-> -> Curso</div>
-                <div id="Camp1">Mais específico<b-button id="I-Camp1"><b-icon id="I-Camp1" icon="triangle-fill" rotate="180">
-                </b-icon></b-button>Campos<b-button id="I-Camp1"><b-icon id="I-Camp1" icon="x" rotate="45">
-                </b-icon></b-button>
+                <div class="modalCamp1">
+                    <div>-> -> Curso</div>
+                    <div id="Camp1">Mais específico<b-button id="I-Camp1"><b-icon id="I-Camp1" icon="triangle-fill" rotate="180">
+                    </b-icon></b-button>Campos<b-button id="I-Camp1"><b-icon id="I-Camp1" icon="x" rotate="45">
+                    </b-icon></b-button>
+                    </div>
                 </div>
-            </div>
 
-             <div class="modalCamp1">
-                <div>-> -> Cordenador</div>
-                <div id="Camp1">Mais específico<b-button id="I-Camp1"><b-icon id="I-Camp1" icon="triangle-fill" rotate="180">
-                </b-icon></b-button>Campos<b-button id="I-Camp1"><b-icon id="I-Camp1" icon="x" rotate="45">
-                </b-icon></b-button>
+                <div class="modalCamp1">
+                    <div>-> -> Cordenador</div>
+                    <div id="Camp1">Mais específico<b-button id="I-Camp1"><b-icon id="I-Camp1" icon="triangle-fill" rotate="180">
+                    </b-icon></b-button>Campos<b-button id="I-Camp1"><b-icon id="I-Camp1" icon="x" rotate="45">
+                    </b-icon></b-button>
+                    </div>
                 </div>
-            </div>
 
-             <div class="modalCamp1">
-                <div>-> -> Aluno</div>
-                <div id="Camp1">Mais específico<b-button id="I-Camp1"><b-icon id="I-Camp1" icon="triangle-fill" rotate="180">
-                </b-icon></b-button>Campos<b-button id="I-Camp1"><b-icon id="I-Camp1" icon="x" rotate="45">
-                </b-icon></b-button>
+                <div class="modalCamp1">
+                    <div>-> -> Aluno</div>
+                    <div id="Camp1">Mais específico<b-button id="I-Camp1"><b-icon id="I-Camp1" icon="triangle-fill" rotate="180">
+                    </b-icon></b-button>Campos<b-button id="I-Camp1"><b-icon id="I-Camp1" icon="x" rotate="45">
+                    </b-icon></b-button>
+                    </div>
                 </div>
-            </div>
-            </div>
-            <button @click="closeModal()">fechar</button>
+
+                <div class="modalCamp1">
+                    <div>
+                    <b-button></b-button>
+                    <b-button></b-button>
+                    <b-button></b-button>
+                    <b-button></b-button>
+                    </div>
+                </div>
+
+                </div>
+                <button @click="closeModal()">fechar</button>
         </div>
 
     </section>
@@ -100,7 +110,7 @@
         return{
             vueCanvas: null,
             rectWidth: 200,
-            testeModal: false
+            Modal: false
         }
     },
     mounted() {
@@ -111,7 +121,7 @@
 
     methods: {
         styleModal () {
-            let modal = document.querySelector('.testeModal');
+            let modal = document.querySelector('.Modal');
             modal.style.display = ('block');
         },
 
@@ -121,7 +131,7 @@
         }, 
 
         closeModal() {
-              let modal = document.querySelector('.testeModal')
+              let modal = document.querySelector('.Modal')
             modal.style.display = ('none');
         },
       
@@ -327,14 +337,13 @@ section {
     height: 40px;
 }
 
-.testeModal {
+.Modal {
     display: none;
     color: #000000;
     background-color: #F9F9F9;
     width: 800px;
     height: 600px;
     border-radius: 8px;
-
     position: absolute;
     margin-top: 150px;
     box-shadow: 5px 5px 10px 5px #aaaaaa;
