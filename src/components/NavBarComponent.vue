@@ -2,7 +2,8 @@
 
   <div>
     <b-navbar toggleable="lg" type="dark" class="navContainer">
-      <b-navbar-brand href="#">VirtualRed</b-navbar-brand>
+      
+      <b-navbar-brand href="#" id="logo"></b-navbar-brand>
 
       <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
@@ -11,11 +12,11 @@
           <b-nav-form >
             <b-input-group size="sm" class="Search" >
               <b-button id="iconSearch" type="submit"><b-icon icon="search"></b-icon></b-button>
-              <b-form-input  type="search"  placeholder="Buscar Funcionalidades"></b-form-input>
+              <b-form-input  type="search"  placeholder= "Buscar Funcionalidades"></b-form-input>
             </b-input-group>
           </b-nav-form>      
         </b-navbar-nav>
-      </b-collapse>
+      </b-collapse>  
 
       <div>
         <b-icon class="h1 mb-2" id="iconAdmin" icon="person-square"></b-icon>
@@ -24,8 +25,8 @@
         <b>Super Adim</b>
         <b id="subAdmin">Super Adim</b>
       </div>
-    </b-navbar>
 
+    </b-navbar>
   </div>
 
   
@@ -49,22 +50,35 @@ export default {
   background-color: #B28DD6;
   display: flex;
   width: 100%;
-  height: 80px;
+  height: 100px;
   border: 1px solid #BFBFBF;
   box-shadow: 5px 5px 5px #aaaaaa;
 }
 
-.Search {
+#logo {
   display: flex;
   align-items: center;
-  width: 400px;
+  justify-content: center;
+  background-color: #fff;
+  border-radius: 50%;
+  width: 200px;
+  height: 78px;
+  margin: 18px 10px;
+}
+
+.Search {
+  display: flex;
+  text-align: end;
+  margin: 15px;
+  width: 300px;
 }
 
 .Search #iconSearch {
   color: #C4C4C4;
-  background-color: #fff;
-  
+  background-color:transparent;
   height: 30px;
+  position: absolute;
+  border: transparent;
 }
 
 .Admin {
