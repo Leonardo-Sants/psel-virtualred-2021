@@ -94,7 +94,7 @@
                     <b-button id="B-ModalCampAluno">Documento</b-button>
                     </div>
                     <div class="B-CampVincular">
-                    <b-button id="B-ModalCampAlunoVincular" @click="closeModal() != closeCampDrop()">Vincular<b-icon id="I-ModalCampAlunoVincular" icon="triangle-fill" rotate="90">
+                    <b-button id="B-ModalCampAlunoVincular" @click="closeModal(), closeCampDrop(), closemodalCampAluno()">Vincular<b-icon id="I-ModalCampAlunoVincular" icon="triangle-fill" rotate="90">
                     </b-icon></b-button>
                     </div>
                 </div>
@@ -147,41 +147,46 @@
         modalCampAluno() {
             let dropAluno = document.querySelector('.ModalCampAluno');
             dropAluno.style.display = ('block');
-        },    
+        },  
+        closemodalCampAluno() {
+            let dropAluno = document.querySelector('.ModalCampAluno');
+            dropAluno.style.display = ('none');
+        },   
       
         line() {
+
             this.vueCanvas.beginPath (); 
-            this.vueCanvas.rect (110, 350, this.rectWidth, 1); 
+            this.vueCanvas.rect (90, 350, this.rectWidth, 1); 
             this.vueCanvas.stroke (); 
 
             this.vueCanvas.beginPath (); 
-            this.vueCanvas.rect (630, 350, this.rectWidth, 1); 
+            this.vueCanvas.rect (520, 350, this.rectWidth, 1); 
             this.vueCanvas.stroke (); 
         },
 
         text() {
             this.vueCanvas.beginPath();
-            this.vueCanvas.Font ='800px Microsoft YaHei '
-            this.vueCanvas.fillText('High School Graduation Diploma',400,50)
+            this.vueCanvas.fillStyle ='800px Microsoft YaHei '
+            this.vueCanvas.fillText('High School Graduation Diploma',330,50)
 
             this.vueCanvas.beginPath();
             this.vueCanvas.Font ='800px Microsoft YaHei '
-            this.vueCanvas.fillText('This certifies that',430,100)
+            this.vueCanvas.fillText('This certifies that',330,100)
 
             this.vueCanvas.beginPath();
             this.vueCanvas. Font ='800px Microsoft YaHei '
-            this.vueCanvas.fillText('Chris O. Christoferson',420,150)
+            this.vueCanvas.fillText('Chris O. Christoferson',320,150)
             this.vueCanvas.beginPath();
             this.vueCanvas. Font ='800px Microsoft YaHei '
-            this.vueCanvas.fillText('This certifies that',430,100)
+            this.vueCanvas.fillText('This certifies that',330,100)
 
             this.vueCanvas.beginPath();
             this.vueCanvas. Font ='800px Microsoft YaHei '
-            this.vueCanvas.fillText('Chris O. Christoferson',420,150)
+            this.vueCanvas.fillText('Chris O. Christoferson',320,150)
 
             this.vueCanvas.beginPath();
             this.vueCanvas. Font ='800px Microsoft YaHei '
-            this.vueCanvas.fillText('has completed all the requirements of the',390,190)
+            this.vueCanvas.fillText('has completed all the requirements of the',290,190)
             this.vueCanvas.fillText('curriculum of Timpton High School.',400,200)
 
             this.vueCanvas.beginPath();
