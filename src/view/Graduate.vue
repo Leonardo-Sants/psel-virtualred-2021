@@ -129,7 +129,6 @@ a {
 
 .table {
     width: 1100px;  
-    background-color: #F9F9F9;
     border-radius: 15px;
     box-shadow: 10px 10px 5px #aaaaaa;
 }
@@ -149,7 +148,9 @@ a {
 #my-table {
     font-size: 12px;
     margin: 100px 10px;
+    border-radius: 8px;
     color: #000000;
+    
 }
 
 

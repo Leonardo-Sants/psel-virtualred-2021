@@ -12,7 +12,7 @@
           <b-nav-form >
             <b-input-group size="sm" class="Search" >
               <b-button id="iconSearch" type="submit"><b-icon icon="search"></b-icon></b-button>
-              <b-form-input  type="search"  placeholder= "Buscar Funcionalidades"></b-form-input>
+              <b-form-input id="Search"  type="search"  placeholder= "Buscar Funcionalidades"></b-form-input>
             </b-input-group>
           </b-nav-form>      
         </b-navbar-nav>
@@ -68,17 +68,23 @@ export default {
 
 .Search {
   display: flex;
-  text-align: end;
   margin: 15px;
-  width: 300px;
+  width: 470px;
+}
+
+.Search #Search {
+  display: flex;
+  text-align: center;
+  border-radius: 8px;
 }
 
 .Search #iconSearch {
   color: #C4C4C4;
   background-color:transparent;
   height: 30px;
+  width: 50px;
   position: absolute;
-  border: transparent;
+  border: none;
 }
 
 .Admin {
