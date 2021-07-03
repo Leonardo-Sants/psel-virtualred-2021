@@ -44,9 +44,40 @@
         </div>
        
         <div  class="testeModal">
-            <p >teste de exibição do modal</p>
             <div class="modalCamp1">
                 <div>Escola</div>
+                <div id="Camp1">Mais específico<b-button id="I-Camp1"><b-icon id="I-Camp1" icon="triangle-fill" rotate="180">
+                </b-icon></b-button>Campos<b-button id="I-Camp1"><b-icon id="I-Camp1" icon="x" rotate="45">
+                </b-icon></b-button>
+                </div>
+            </div>
+
+             <div class="modalCamp1">
+                <div>Reitor</div>
+                <div id="Camp1">Mais específico<b-button id="I-Camp1"><b-icon id="I-Camp1" icon="triangle-fill" rotate="180">
+                </b-icon></b-button>Campos<b-button id="I-Camp1"><b-icon id="I-Camp1" icon="x" rotate="45">
+                </b-icon></b-button>
+                </div>
+            </div>
+
+             <div class="modalCamp1">
+                <div>Curso</div>
+                <div id="Camp1">Mais específico<b-button id="I-Camp1"><b-icon id="I-Camp1" icon="triangle-fill" rotate="180">
+                </b-icon></b-button>Campos<b-button id="I-Camp1"><b-icon id="I-Camp1" icon="x" rotate="45">
+                </b-icon></b-button>
+                </div>
+            </div>
+
+             <div class="modalCamp1">
+                <div>Cordenador</div>
+                <div id="Camp1">Mais específico<b-button id="I-Camp1"><b-icon id="I-Camp1" icon="triangle-fill" rotate="180">
+                </b-icon></b-button>Campos<b-button id="I-Camp1"><b-icon id="I-Camp1" icon="x" rotate="45">
+                </b-icon></b-button>
+                </div>
+            </div>
+
+             <div class="modalCamp1">
+                <div>Aluno</div>
                 <div id="Camp1">Mais específico<b-button id="I-Camp1"><b-icon id="I-Camp1" icon="triangle-fill" rotate="180">
                 </b-icon></b-button>Campos<b-button id="I-Camp1"><b-icon id="I-Camp1" icon="x" rotate="45">
                 </b-icon></b-button>
@@ -314,6 +345,7 @@ section {
     box-shadow: 10px 10px 15px 15px #aaaaaa;
     border-radius: 8px;
     border-color: #000000;
+    font-weight: 500;
 }
 
 #Camp1 {
@@ -322,11 +354,16 @@ section {
     width: 100%;
     margin: 450px;
     position: absolute;
-    font-size: 14px;
+    font-size: 16px;
+    
 }
 
 #I-Camp1 {
-    background-color: blue;
+    background-color: transparent;
+    color: #B28DD6;
+    border: none;
+    font-size: 20px;
+    margin: 5px;
 }
 
 </style>
