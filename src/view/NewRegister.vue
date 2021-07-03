@@ -166,35 +166,29 @@
 
         text() {
             this.vueCanvas.beginPath();
-            this.vueCanvas.fillStyle ='800px Microsoft YaHei '
-            this.vueCanvas.fillText('High School Graduation Diploma',330,50)
+            this.vueCanvas.font ='16px Microsoft YaHei '
+            this.vueCanvas.fillText('High School Graduation Diploma',290,50)
 
             this.vueCanvas.beginPath();
-            this.vueCanvas.Font ='800px Microsoft YaHei '
-            this.vueCanvas.fillText('This certifies that',330,100)
+            this.vueCanvas.font ='16px Microsoft YaHei '
+            this.vueCanvas.fillText('This certifies that',350,100)
 
             this.vueCanvas.beginPath();
-            this.vueCanvas. Font ='800px Microsoft YaHei '
-            this.vueCanvas.fillText('Chris O. Christoferson',320,150)
+            this.vueCanvas.font ='16px Microsoft YaHei '
+            this.vueCanvas.fillText('Chris O. Christoferson',330,150)
             this.vueCanvas.beginPath();
-            this.vueCanvas. Font ='800px Microsoft YaHei '
-            this.vueCanvas.fillText('This certifies that',330,100)
 
             this.vueCanvas.beginPath();
-            this.vueCanvas. Font ='800px Microsoft YaHei '
-            this.vueCanvas.fillText('Chris O. Christoferson',320,150)
+            this.vueCanvas.font ='16px Microsoft YaHei '
+            this.vueCanvas.fillText('has completed all the requirements of the',260,250)
+            this.vueCanvas.fillText('curriculum of Timpton High School.',280,270)
 
             this.vueCanvas.beginPath();
-            this.vueCanvas. Font ='800px Microsoft YaHei '
-            this.vueCanvas.fillText('has completed all the requirements of the',290,190)
-            this.vueCanvas.fillText('curriculum of Timpton High School.',400,200)
-
-            this.vueCanvas.beginPath();
-            this.vueCanvas. Font ='800px Microsoft YaHei '
-            this.vueCanvas.fillText('Takehiro Kanegi',180, 365)
-            this.vueCanvas.fillText('University Director',180, 375)
-            this.vueCanvas.fillText('Mary Waltman',700, 365)
-            this.vueCanvas.fillText('School Principal',700, 375)
+            this.vueCanvas.font ='16px Microsoft YaHei '
+            this.vueCanvas.fillText('Takehiro Kanegi',130, 370)
+            this.vueCanvas.fillText('University Director',130, 385)
+            this.vueCanvas.fillText('Mary Waltman',570, 370)
+            this.vueCanvas.fillText('School Principal',570, 385)
            
         }
     }
