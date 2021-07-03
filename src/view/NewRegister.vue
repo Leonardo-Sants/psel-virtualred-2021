@@ -38,29 +38,25 @@
             </el-dialog>
         </div>
 
-        <div class="V-Camp">
-            <b-button id="V-Camp" v-b-modal.modal-xl>Vincular Campo<b-icon id="V-CampIcon" icon="server">
+        <div  class="V-Camp">
+             <b-button id="V-Camp"  @click="styleModal()">Vincular Campo<b-icon id="V-CampIcon" icon="server">
             </b-icon></b-button>
         </div>
-
-        <div class="modal">
-            <b-modal centered class="dropDown" id="modal-xl" size="xl">
-                <p class="my-4">Hello from modal!</p>
-                <b-button-group class="mt-3">
-                    <b-button size="lg" variant="light" width="500px" id="escola">Escola</b-button>
-                    <b-dropdown size="lg" variant="light" class="mx-1" right text="menu">
-                        <b-dropdown-item>Item 1</b-dropdown-item>
-                        <b-dropdown-item>Item 2</b-dropdown-item>
-                        <b-dropdown-item>Item 3</b-dropdown-item>
-                    </b-dropdown>
-                </b-button-group>
-            
-            </b-modal>
-        </div>
-
-        <b-button @click="styleModal()">teste modal</b-button>
+       
         <div  class="testeModal">
             <p >teste de exibição do modal</p>
+            <div class="modalCamp1">
+                <b-button-group>
+                    <p>Escola</p>
+                    <b-button  variant="outline-primary">Button</b-button>
+                    <b-dropdown  variant="outline-primary" right text="Split Menu">
+                    <b-dropdown-item>Item 1</b-dropdown-item>
+                    <b-dropdown-item>Item 2</b-dropdown-item>
+                    <b-dropdown-divider></b-dropdown-divider>
+                    <b-dropdown-item>Item 3</b-dropdown-item>
+                    </b-dropdown>
+                </b-button-group>
+            </div>
             <button @click="closeModal()">fechar</button>
         </div>
 
@@ -300,18 +296,29 @@ section {
 
 .testeModal {
     display: none;
-    align-items: center;
-    justify-content: center;
-    background-color: #000000;
-    color: #fff;
+    color: #000000;
+    background-color: #F9F9F9;
     width: 800px;
-    height: 450px;
+    height: 600px;
+    border-radius: 8px;
+
     position: absolute;
-    margin-top: 50px;
+    margin-top: 150px;
+    box-shadow: 5px 5px 10px 5px #aaaaaa;
 }
 
-.modal {
-    background-color: blue;
+.modalCamp1 {
+    width: 766px;
+    height: 54px;
+    display: flex;
+    margin: 10px;
+    align-items: center;
+    justify-content: center;
+    color: #000000;
+    background-color: #F9F9F9;
+    box-shadow: 10px 10px 15px 15px #aaaaaa;
+    border-radius: 8px;
+    border-color: #000000;
 }
 
 </style>
