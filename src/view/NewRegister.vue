@@ -52,16 +52,17 @@
             </b-icon></b-button>
         </div>
     
-        <div  class="Modal">
+        <div class="mod">      
+            <div class="Modal">
                 <div class="modalCamp1">
                     <div>Escola</div>
                     <div id="Camp1">Mais específico<b-button id="I-Camp1" @click=" CampDrop()"><b-icon id="I-Camp1" icon="triangle-fill" rotate="180">
                     </b-icon></b-button>Campos<b-button id="I-Camp1"><b-icon id="I-Camp1" icon="x" rotate="45">
                     </b-icon></b-button>
                     </div>
-                </div>
+                    </div>
 
-                <div class="CampDropdown">
+                    <div class="CampDropdown">
                 <div class="modalCamp1">
                     <div>-> Reitor</div>
                     <div id="Camp1">Mais específico<b-button id="I-Camp1"><b-icon id="I-Camp1" icon="triangle-fill" rotate="180">
@@ -97,20 +98,21 @@
 
                 <div class="ModalCampAluno">
                     <div>
-                    <b-button id="B-ModalCampAluno">Nome</b-button>
-                    <b-button id="B-ModalCampAluno">Idade</b-button>
-                    <b-button id="B-ModalCampAluno">Genero</b-button>
-                    <b-button id="B-ModalCampAluno">Documento</b-button>
-                    </div>
-                    <div class="B-CampVincular">
-                    <b-button id="B-ModalCampAlunoVincular" @click="closeModal(), closeCampDrop(), closemodalCampAluno()">Vincular<b-icon id="I-ModalCampAlunoVincular" icon="triangle-fill" rotate="90">
-                    </b-icon></b-button>
+                        <b-button id="B-ModalCampAluno">Nome</b-button>
+                        <b-button id="B-ModalCampAluno">Idade</b-button>
+                        <b-button id="B-ModalCampAluno">Genero</b-button>
+                        <b-button id="B-ModalCampAluno">Documento</b-button>
+                        </div>
+                        <div class="B-CampVincular">
+                        <b-button id="B-ModalCampAlunoVincular" @click="closeModal(), closeCampDrop(), closemodalCampAluno()">Vincular<b-icon id="I-ModalCampAlunoVincular" icon="triangle-fill" rotate="90">
+                        </b-icon></b-button>
                     </div>
                 </div>
 
                 </div>
+            </div>
         </div>
-
+        
     </section>
 </template>
 
@@ -123,7 +125,6 @@
         return{
             vueCanvas: null,
             rectWidth: 200,
-            Modal: false
         }
     },
     mounted() {
@@ -134,12 +135,12 @@
 
     methods: {
         styleModal () {
-            let modal = document.querySelector('.Modal');
+            let modal = document.querySelector('.mod');
             modal.style.display = ('block');
         },
 
         closeModal() {
-            let modal = document.querySelector('.Modal')
+            let modal = document.querySelector('.mod')
             modal.style.display = ('none');
         },
 
@@ -368,15 +369,25 @@ section {
     height: 40px;
 }
 
-.Modal {
+.mod{
     display: none;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: 2000;
+    position: fixed;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+.Modal {
     color: #000000;
     background-color: #F9F9F9;
     width: 800px;
     height: 600px;
+    margin: 5px 250px;
     border-radius: 8px;
     position: absolute;
-    margin-top: 150px;
     box-shadow: 5px 5px 10px 5px #aaaaaa;
 }
 
@@ -454,6 +465,5 @@ section {
 #I-ModalCampAlunoVincular {
     display: flex;
 }
-
 
 </style>
