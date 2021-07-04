@@ -4,13 +4,13 @@
         <div class="headerRegister">
             <p>Cadastrar novo template</p>
             <div class="BtnSave">
-                <b-button id="SaveButton" size="sm" type="submit">Salvar</b-button>
+                <b-button id="SaveButton" size="sm" type="submit"><a href="/">Salvar</a></b-button>
             </div>
         </div>
 
         <div class="Edit">
              <div class="EditCanvas">
-            <b-button id="Canva-img" size="sm" type="submit" @click="img()">Subir Imagem <div id="icon-up"><b-icon  icon="image"></b-icon></div></b-button>
+            <b-button id="Canva-img" size="sm" type="submit" @click="upImg()">Subir Imagem <div id="icon-up"><b-icon  icon="image"></b-icon></div></b-button>
                 <div>
                     <hr class="linha-H">
                 </div>
@@ -161,7 +161,15 @@
         closemodalCampAluno() {
             let dropAluno = document.querySelector('.ModalCampAluno');
             dropAluno.style.display = ('none');
-        },   
+        }, 
+        
+        upImg() {
+            this.vueCanvas.drawImage(img,10,10)
+            var img = new Image();
+            img.src = "../assets/Diploma.jpg"
+            this.vueCanvas.drawImage(img,0,0);
+      
+        },
       
         line() {
 
@@ -207,6 +215,10 @@
 </script>
 
 <style scoped>
+a {
+    color: #fff;
+    text-decoration: none;
+}
 section {
     width: 85%;
     height: 100%;
