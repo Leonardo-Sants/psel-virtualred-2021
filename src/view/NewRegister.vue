@@ -11,12 +11,21 @@
         <div class="Edit">
              <div class="EditCanvas">
             <b-button id="Canva-img" size="sm" type="submit" @click="img()">Subir Imagem <div id="icon-up"><b-icon  icon="image"></b-icon></div></b-button>
-                 <p>Formas:</p>
+                <div>
+                    <hr class="linha-H">
+                </div>
+                <p>Formas:</p>
             <b-button id="Canva-Forms" size="sm" type="submit" @click="line()"><b-icon id="icon" icon="star"></b-icon></b-button>
+                <div>
+                    <hr class="linha-H">
+                </div>
                 <p>Campos:</p>
             <b-button id="Canva-text" size="sm" type="submit" @click="text()">T</b-button>
             <b-button id="Canva-text" size="sm" type="submit" ><b-icon id="icon" icon="image"></b-icon></b-button>
-             </div> 
+             </div>
+            <div>
+                <hr class="linha-H">
+            </div>  
             <div>
                 <p>Editando:</p>
             </div>
@@ -269,6 +278,15 @@ section {
 #icon-up {
     display: flex;
     margin-left: 40px;
+}
+
+.linha-H {
+    display: flex;
+    align-items: center;
+    margin: 0px 15px;
+    height: 25px;
+    border-left: 1px solid;
+    color: #989898;
 }
 
 .Edit  p{
