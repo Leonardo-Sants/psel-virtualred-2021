@@ -9,20 +9,20 @@
         </div>
 
         <div class="Edit">
-             <div class="EditCanvas">
-            <b-button id="Canva-img" size="sm" type="submit" @click="upImg()">Subir Imagem <div id="icon-up"><b-icon  icon="image"></b-icon></div></b-button>
+            <div class="EditCanvas">
+                <b-button id="Canva-img" size="sm" type="submit" @click="upImg()">Subir Imagem <div id="icon-up"><b-icon  icon="image"></b-icon></div></b-button>
                 <div>
                     <hr class="linha-H">
                 </div>
                 <p>Formas:</p>
-            <b-button id="Canva-Forms" size="sm" type="submit" @click="line()"><b-icon id="icon" icon="star"></b-icon></b-button>
+                    <b-button id="Canva-Forms" size="sm" type="submit" @click="line()"><b-icon id="icon" icon="star"></b-icon></b-button>
                 <div>
                     <hr class="linha-H">
                 </div>
                 <p>Campos:</p>
-            <b-button id="Canva-text" size="sm" type="submit" @click="text()">T</b-button>
-            <b-button id="Canva-text" size="sm" type="submit" ><b-icon id="icon" icon="image"></b-icon></b-button>
-             </div>
+                    <b-button id="Canva-text" size="sm" type="submit" @click="text()">T</b-button>
+                    <b-button id="Canva-text" size="sm" type="submit" ><b-icon id="icon" icon="image"></b-icon></b-button>
+            </div>
             <div>
                 <hr class="linha-H">
             </div>  
@@ -39,12 +39,7 @@
         </div>
  
         <div>
-           
-            <el-dialog
-                :visible.sync="dialogJPG"
-                append-to-body>
-                <canvas id="mycanvas"  width= "800px" height="550px"></canvas>
-            </el-dialog>
+            <canvas class="CanvasImg" id="mycanvas"  width= "800px" height="550px"></canvas>
         </div>
 
         <div  class="V-Camp">
@@ -60,54 +55,66 @@
                     </b-icon></b-button>Campos<b-button id="I-Camp1"><b-icon id="I-Camp1" icon="x" rotate="45">
                     </b-icon></b-button>
                     </div>
-                    </div>
-
-                    <div class="CampDropdown">
-                <div class="modalCamp1">
-                    <div>-> Reitor</div>
-                    <div id="Camp1">Mais específico<b-button id="I-Camp1"><b-icon id="I-Camp1" icon="triangle-fill" rotate="180">
-                    </b-icon></b-button>Campos<b-button id="I-Camp1"><b-icon id="I-Camp1" icon="x" rotate="45">
-                    </b-icon></b-button>
-                    </div>
                 </div>
 
-                <div class="modalCamp1">
-                    <div>-> -> Curso</div>
-                    <div id="Camp1">Mais específico<b-button id="I-Camp1"><b-icon id="I-Camp1" icon="triangle-fill" rotate="180">
-                    </b-icon></b-button>Campos<b-button id="I-Camp1"><b-icon id="I-Camp1" icon="x" rotate="45">
-                    </b-icon></b-button>
+                <div class="CampDropdown">
+                    <div class="modalCamp1">
+                        <div>-> Reitor</div>
+                        <div id="Camp1">Mais específico<b-button id="I-Camp1"><b-icon id="I-Camp1" icon="triangle-fill" rotate="180">
+                            </b-icon></b-button>Campos<b-button id="I-Camp1"><b-icon @click=" modalCampReitor()" id="I-Camp1" icon="x" rotate="45">
+                            </b-icon></b-button>
+                        </div>
                     </div>
-                </div>
 
-                <div class="modalCamp1">
-                    <div>-> -> Cordenador</div>
-                    <div id="Camp1">Mais específico<b-button id="I-Camp1"><b-icon id="I-Camp1" icon="triangle-fill" rotate="180">
-                    </b-icon></b-button>Campos<b-button id="I-Camp1"><b-icon id="I-Camp1" icon="x" rotate="45">
-                    </b-icon></b-button>
+                    <div class="modalCamp1">
+                        <div>-> -> Curso</div>
+                        <div id="Camp1">Mais específico<b-button id="I-Camp1"><b-icon id="I-Camp1" icon="triangle-fill" rotate="180">
+                            </b-icon></b-button>Campos<b-button id="I-Camp1"><b-icon id="I-Camp1" icon="x" rotate="45">
+                            </b-icon></b-button>
+                        </div>
                     </div>
-                </div>
 
-                <div class="modalCamp1">
-                    <div>-> -> Aluno</div>
-                    <div id="Camp1">Mais específico<b-button id="I-Camp1"><b-icon id="I-Camp1" icon="triangle-fill" rotate="180">
-                    </b-icon>
-                    </b-button>Campos<b-button id="I-Camp1" @click=" modalCampAluno()" ><b-icon id="I-Camp1" icon="x" rotate="45">
-                    </b-icon></b-button>
+                    <div class="modalCamp1">
+                        <div>-> -> Cordenador</div>
+                        <div id="Camp1">Mais específico<b-button id="I-Camp1"><b-icon id="I-Camp1" icon="triangle-fill" rotate="180">
+                            </b-icon></b-button>Campos<b-button id="I-Camp1"><b-icon id="I-Camp1" icon="x" rotate="45">
+                            </b-icon></b-button>
+                        </div>
                     </div>
-                </div>
 
-                <div class="ModalCampAluno">
-                    <div>
-                        <b-button id="B-ModalCampAluno">Nome</b-button>
-                        <b-button id="B-ModalCampAluno">Idade</b-button>
-                        <b-button id="B-ModalCampAluno">Genero</b-button>
-                        <b-button id="B-ModalCampAluno">Documento</b-button>
+                    <div class="modalCamp1">
+                        <div>-> -> Aluno</div>
+                        <div id="Camp1">Mais específico<b-button id="I-Camp1"><b-icon id="I-Camp1" icon="triangle-fill" rotate="180"></b-icon>
+                            </b-button>Campos<b-button id="I-Camp1" @click=" modalCampAluno()" ><b-icon id="I-Camp1" icon="x" rotate="45">
+                            </b-icon></b-button>
+                        </div>
+                    </div>
+
+                    <div class="ModalCampAluno">
+                        <div>
+                            <b-button id="B-ModalCampAluno" @click="name(),closeModal(), closeCampDrop(), closemodalCampAluno(), closemodalCampReitor()">Nome</b-button>
+                            <b-button id="B-ModalCampAluno">Idade</b-button>
+                            <b-button id="B-ModalCampAluno">Genero</b-button>
+                            <b-button id="B-ModalCampAluno">Documento</b-button>
                         </div>
                         <div class="B-CampVincular">
-                        <b-button id="B-ModalCampAlunoVincular" @click="closeModal(), closeCampDrop(), closemodalCampAluno()">Vincular<b-icon id="I-ModalCampAlunoVincular" icon="triangle-fill" rotate="90">
-                        </b-icon></b-button>
+                            <b-button id="B-ModalCampAlunoVincular" @click="closeModal(), closeCampDrop(), closemodalCampAluno(), closemodalCampReitor()">Vincular<b-icon id="I-ModalCampAlunoVincular" icon="triangle-fill" rotate="90">
+                            </b-icon></b-button>
+                        </div>
                     </div>
-                </div>
+                    <div class="ModalCampReitor">
+                        <div>
+                            <b-button id="B-ModalCampReitor">Nome</b-button>
+                            <b-button id="B-ModalCampReitor">Idade</b-button>
+                            <b-button id="B-ModalCampReitor">Genero</b-button>
+                            <b-button id="B-ModalCampReitor">Documento</b-button>
+                            <b-button id="B-ModalCampReitor" @click="reitor(), closeModal(), closeCampDrop(), closemodalCampAluno(), closemodalCampReitor()">Assinatura</b-button>
+                        </div>
+                        <div class="B-CampVincular">
+                            <b-button id="B-ModalCampAlunoVincular" @click="closeModal(), closeCampDrop(), closemodalCampAluno(), closemodalCampReitor()">Vincular<b-icon id="I-ModalCampAlunoVincular" icon="triangle-fill" rotate="90">
+                            </b-icon></b-button>
+                        </div>
+                    </div>
 
                 </div>
             </div>
@@ -130,7 +137,7 @@
     mounted() {
         var c = document.getElementById("mycanvas");
         var ctx = c.getContext("2d");    
-        this.vueCanvas = ctx;  
+        this.vueCanvas = ctx; 
     },
 
     methods: {
@@ -158,27 +165,44 @@
             let dropAluno = document.querySelector('.ModalCampAluno');
             dropAluno.style.display = ('block');
         },  
+
+        modalCampReitor() {
+            let dropAluno = document.querySelector('.ModalCampReitor');
+            dropAluno.style.display = ('block');
+        },
+
         closemodalCampAluno() {
             let dropAluno = document.querySelector('.ModalCampAluno');
             dropAluno.style.display = ('none');
         }, 
+
+         closemodalCampReitor() {
+            let dropAluno = document.querySelector('.ModalCampReitor');
+            dropAluno.style.display = ('none');
+        }, 
         
-        upImg() {
-            this.vueCanvas.drawImage(img,10,10)
-            var img = new Image();
-            img.src = "../assets/Diploma.jpg"
-            this.vueCanvas.drawImage(img,0,0);
-      
+         name() {
+            this.vueCanvas.beginPath ();  
+            this.vueCanvas.fillRect(90,330,190,60);
+            this.vueCanvas.strokeStyle='lightgreen';
+            this.vueCanvas.stroke();
+        },
+
+        reitor() {
+            this.vueCanvas.beginPath ();  
+            this.vueCanvas.fillRect(520,330,190,60);
+            this.vueCanvas.strokeStyle='lightgreen';
+            this.vueCanvas.stroke();
         },
       
         line() {
 
             this.vueCanvas.beginPath (); 
-            this.vueCanvas.rect (90, 350, this.rectWidth, 1); 
+            this.vueCanvas.rect (90, 400, 193, 1); 
             this.vueCanvas.stroke (); 
 
             this.vueCanvas.beginPath (); 
-            this.vueCanvas.rect (520, 350, this.rectWidth, 1); 
+            this.vueCanvas.rect (520, 400, 193, 1); 
             this.vueCanvas.stroke (); 
         },
 
@@ -203,10 +227,10 @@
 
             this.vueCanvas.beginPath();
             this.vueCanvas.font ='16px Microsoft YaHei '
-            this.vueCanvas.fillText('Takehiro Kanegi',130, 370)
-            this.vueCanvas.fillText('University Director',130, 385)
-            this.vueCanvas.fillText('Mary Waltman',570, 370)
-            this.vueCanvas.fillText('School Principal',570, 385)
+            this.vueCanvas.fillText('Takehiro Kanegi',130, 420)
+            this.vueCanvas.fillText('University Director',130, 440)
+            this.vueCanvas.fillText('Mary Waltman',570, 420)
+            this.vueCanvas.fillText('School Principal',570, 440)
            
         }
     }
@@ -471,11 +495,33 @@ section {
     margin-left: 550px;
     background-color: #000;
     border-radius: 8px;
-    margin-top: 55px;
+    margin-top: 30px;
 }
 
 #I-ModalCampAlunoVincular {
     display: flex;
+}
+
+.ModalCampReitor {
+    display: none;
+}
+
+.ModalCampReitor #B-ModalCampReitor {
+    color: #000;
+    background-color: transparent;
+    width: 140px;
+    height: 46px;
+    margin: 20px 10px 0px 15px;
+    border-radius: 8px;
+    border: 1.5px solid #000;
+    font: 16px;
+    font-weight:500;
+}
+
+#B-ModalCampReitor:hover {
+    background-color: #B28DD6;
+    color: #fff;
+    border: none;
 }
 
 </style>

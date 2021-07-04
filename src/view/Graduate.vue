@@ -9,16 +9,16 @@
         </div>
         <div class="Filter">
             <div class="paragrafos">
-            <p id="P-Filter"><b-icon icon="funnel"></b-icon>Filter</p>
+                <p id="P-Filter"><b-icon icon="funnel"></b-icon>Filter</p>
             <div>
                 <hr class="linha-H">
             </div>
-            <p id="P-Order">Ordenar por</p>
+                <p id="P-Order">Ordenar por</p>
             </div>
             <div class="BtnFilter">
-            <b-button id="B-Filter" size="sm" type="submit">Data</b-button>
-            <b-button id="B-FilterName" size="sm" type="submit">Nome</b-button>
-            <b-button id="B-FilterAtt" size="sm" type="submit">Atualização</b-button>
+                <b-button id="B-Filter" size="sm" type="submit">Data</b-button>
+                <b-button id="B-FilterName" size="sm" type="submit">Nome</b-button>
+                <b-button id="B-FilterAtt" size="sm" type="submit">Atualização</b-button>
             </div>
         </div>
 
@@ -38,11 +38,11 @@
             </b-table>
 
             <b-pagination class="Page"
-            v-model="currentPage"
-            :total-rows="rows"
-            :per-page="perPage"
-            aria-controls="my-table"
-            ></b-pagination>
+                v-model="currentPage"
+                :total-rows="rows"
+                :per-page="perPage"
+                aria-controls="my-table">
+            </b-pagination>
             
 
         </div>
