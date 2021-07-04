@@ -1,5 +1,6 @@
 <template>
     <section>
+
         <div class="headerRegister">
             <p>Template de diplomas cadastrados</p>
             <div class="BtnRegister">
@@ -7,14 +8,25 @@
             </div>
         </div>
         <div class="Filter">
-            <p><b-icon icon="funnel"></b-icon>Filter</p>
-            <p>Ordenar por</p>
+            <div class="paragrafos">
+            <p id="P-Filter"><b-icon icon="funnel"></b-icon>Filter</p>
+            <div>
+                <hr class="linha-H">
+            </div>
+            <p id="P-Order">Ordenar por</p>
+            </div>
             <div class="BtnFilter">
             <b-button id="B-Filter" size="sm" type="submit">Data</b-button>
             <b-button id="B-FilterName" size="sm" type="submit">Nome</b-button>
             <b-button id="B-FilterAtt" size="sm" type="submit">Atualização</b-button>
             </div>
         </div>
+
+        <div class="Line">
+            <hr class="linha-vertical">
+            <p id="text-line">Diploma</p>
+        </div>
+
         <div class="overflow-auto">
 
             <b-table class="table"
@@ -99,6 +111,35 @@ a {
     color: #fff;
 }
 
+.paragrafos {
+    display: flex;
+    margin: 0px 5px;
+}
+
+#P-Filter{
+    display: flex;
+    align-items: center;
+    margin: 0px 15px;
+    padding: 0px 5px;
+    color: #989898;
+}
+
+.linha-H {
+    display: flex;
+    align-items: center;
+    margin: 0px 10px;
+    height: 25px;
+    border-left: 1px solid;
+    color: #989898;
+}
+
+#P-Order{
+    display: flex;
+    align-items: center;
+    margin: 0px 15px;
+    color: #989898;
+}
+
 .Filter  {
     width: 100%;
     display: flex;
@@ -125,6 +166,31 @@ a {
 #B-FilterAtt {
     border-radius: 0px 10px 10px 0px;
     margin: 0px 2px;
+}
+
+.Line {
+    display: flex;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.Line #text-line{
+    color: #fff;
+    background-color: #000000;
+    border-radius: 8px;
+    margin-left: 60px;
+    width: 78px;
+    height: 20px;
+    margin-top: 5px;
+    font-size: 12px;
+    text-align: center;  
+    position: absolute; 
+    font-weight: 600;
+}
+
+.linha-vertical {
+    width: 100%;
+    border: 1px dashed #C4C4C4;
 }
 
 .table {
